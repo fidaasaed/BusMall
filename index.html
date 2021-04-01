@@ -1,62 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <title>Bus Mall</title>
-    <link rel="stylesheet" href="css">
+    <title>Bus Mall Store</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 
-
-
 <body>
-    <div id="header-div">
-        <header>
-            <img src="https://thumbs.dreamstime.com/b/shopping-bags-word-shop-white-background-87106023.jpg" alt=""
-                id="bus">
-            <h1 id="header"> Bus Mall </h1>
-            
-        </header>
-    </div>
-    <div id="firstImg">
-    <img id="img" src="img/1.jpg"  alt=""></div>
-    <!-- <section style="border: 2.5px solid white;">
-          
-    </section> -->
-   
+
+    <header>
+        <h1>Bus Mall Store</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cart.html">Cart</a><span id="itemCount"></span></li>
+            </ul>
+        </nav>
+    </header>
+
     <main>
-        <h1 id="img-first"> Our Products </h1>
-        <div id="img-list">
-            <div id="img3-div"> <img src="img/breakfast.jpg" height= "1500px"     width="600px" id="right-img" class="img" alt=""></div>
-            <div id="img2-div"><img src="img/banana.jpg" height= "1500px"     width="600px" id="center-img" class="img" alt=""></div>
-            <div id="img1-div"> <img src="img/bag.jpg"  height= "1500px"     width="600px" id="left-img" class="img" alt=""></div>
+
+        <section class="deck col-1">
+            <div class="card">
+                <header>
+                    <h1 style="margin-top: 70px; text-align: left; margin-left: 16px;"> Shop Our Catalog</h1>
+                </header>
+                <div class="copy">
+                    <ol>
+                        <li>Select an item from our catalog and indicate how many you would like to purchase.</li>
+                        <li>Once you've made your selection, click the "Add to Cart" button</li>
+                        <li>When you are ready to purchase, click the "Cart" link above to view your cart and check out</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+      <section class="deck col-2">
+        <div class="card">
+          <div class="copy">
+            <form id="catalog">
+              <fieldset>
+                <legend>Catalog</legend>
+                <label>
+                  <span>Item</span>
+                  <select id="items">
+
+                     </select>
+                </label>
+                <label>
+                  <span>Quantity</span>
+                  <input id="quantity" type="number" />
+                </label>
+                <input type="submit" value="Add To Cart" />
+              </fieldset>
+            </form>
+          </div>
         </div>
+        <div class="card" id="cartContents"></div>
+      </section>
+
     </main>
-    <br><br><br><br>
-    <!-- <p id="lorem" style="border: 2px solid white;">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque quam rem praesentium laborum, magnam deserunt ab
-        ipsa vel voluptate fugiat soluta, eligendi quae tempore et accusantium temporibus odit nisi error!
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque quam rem praesentium laborum, magnam deserunt ab
-        ipsa vel voluptate fugiat soluta, eligendi quae tempore et accusantium temporibus odit nisi error!
 
-    </p> -->
-    <div id="canvas">
-        <canvas  width="100px" id="myChart">
+    <footer>
+        <p>&copy;2018 Code Fellows 201d33</p>
+    </footer>
 
-        </canvas>
-    </div>
-    </br>
-    <div>
-        <ul id="final">
-        </ul>
-    </div>
-
-
-    <div id="footer">
-        <footer>
-        </footer>
-    </div>
-
-    <script src="app.js"></script>
+    <script src='js/app.js'></script>
+    <script src='js/catalog.js'></script>
 </body>
 
 </html>
